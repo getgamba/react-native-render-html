@@ -71,14 +71,14 @@ export function ul (htmlAttribs, children, convertedCSSStyles, passProps = {}) {
             }
         }
         return (
-            <View key={`list-${nodeIndex}-${index}`} style={{ flexDirection: 'row', marginBottom: 10 }}>
+            <View key={`list-${nodeIndex}-${index}`} style={{ flexDirection: 'row', marginBottom: 5 }}>
                 { prefix }
                 <View style={{ flex: 1 }}>{ child }</View>
             </View>
         );
     });
     return (
-        <View style={{ paddingLeft: 20 }} key={key}>
+        <View style={{ paddingLeft: 10 }} key={key}>
             { children }
         </View>
     );

@@ -13,7 +13,9 @@ function cssStringToObject (str) {
         .map((prop) => prop.split(':'))
         .reduce((acc, prop) => {
             if (prop.length === 2) {
-                acc[prop[0].trim()] = prop[1].trim();
+                var key = prop[0].trim()
+		key == 'background' && (key = 'background-color')
+                acc[key] = prop[1].trim();
             }
             return acc;
         }, {});
